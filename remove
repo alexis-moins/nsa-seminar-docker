@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+docker container stop "nsa-pool-day${1}"
+docker container rm "nsa-pool-day${1}"

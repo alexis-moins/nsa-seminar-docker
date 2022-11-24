@@ -1,3 +1,4 @@
 #!/bin/bash
 set -e
+
 docker exec -it "nsa-pool-day${1}" bash
