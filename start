@@ -2,4 +2,4 @@
 set -e
 
 docker build -t nsa:latest .
-docker run -d -t -p 22:22 --name "nsa-pool-day${1}" nsa:latest
+docker run -d -t --name "nsa-pool-day${1}" nsa:latest
