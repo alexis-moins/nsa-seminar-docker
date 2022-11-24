@@ -3,3 +3,11 @@ set -e
 
 docker build -t nsa:latest .
 docker run -d -t --name "nsa-pool-day${1}" nsa:latest
+
+clear
+read -p "Attach to the container now ? [y/n]: " yn
+
+case $yn in
+    [Yy]*) ./attach ${1};;  
+    [Nn]*) exit 0;;
+esac
