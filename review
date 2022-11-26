@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+docker run -d -t -h client --name client nsa-client-final
+docker run -d -t -h server --name server -p 80:80 nsa-server:ssh 
